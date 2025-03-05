@@ -50,7 +50,7 @@
         /* Sections */
         section {
             padding: 4rem 2rem;
-            min-height: 100vh;
+            min-height:fit-content;
             padding-top: 6rem;
         }
 
@@ -176,23 +176,70 @@
             transition: opacity 0.3s;
         }
 
-            img[data-src] {
-                opacity: 0;
-            }
+        img[data-src] {
+            opacity: 0;
+        }
 
         .project-image, .gallery-item img {
             background: #f0f0f0;
             object-fit: contain; /* Change from 'cover' if needed */
         }
+
+        .skill-tags {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .skill-tag {
+            background: #00bcd4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+            .skill-tag:hover {
+                transform: translateY(-3px);
+            }
     </style>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#games">Game Projects</a></li>
-            <li><a href="#cpp">C++ Projects</a></li>
+            <li><a href="#cpp">University Projects</a></li>
         </ul>
     </nav>
+
+    <section id="about">
+        <div class="section-header">
+            <h2>Game Developer & Technical Designer</h2>
+        </div>
+        <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
+                Passionate game developer with 5+ years experience creating diverse gaming experiences across multiple genres.
+                My work spans from experimental prototypes to commercial projects, with particular expertise in gameplay programming and
+                technical design. I bridge technical excellence with player-centric design. This portfolio highlights projects
+                that demostrate my wide range of skills. 
+                <br/>
+                <strong>"If it's not fun, why bother?"</strong> - Reggie Fils-Aimé
+            </p>
+            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="skill-tag">C++ & C# Expert</div>
+                <div class="skill-tag">Unity & UE5 Specialist</div>
+                <div class="skill-tag">VR/AR Development</div>
+                <div class="skill-tag">AI/ML Implementation</div>
+                <div class="skill-tag">Multiplayer Systems</div>
+                <div class="skill-tag">English & Spanish</div>
+            </div>
+        </div>
+    </section>
 
     <!-- Games Section -->
     <section id="games">
@@ -203,24 +250,86 @@
             <!-- Repeat this card for each project -->
             <div class="project-card">
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6M1lalgbFoo?si=wr_7bHVi9N88uWYX" 
-                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6M1lalgbFoo?si=wr_7bHVi9N88uWYX"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="project-content">
                     <h3>Shovel & Swindle</h3>
-                    <p>Developed in UE5 with my indie company Afterfire Studios</p>
+                    <p>Developed in UE5 with my indie company Afterfire Studios, S&S is a puzzle/adventure coop game where you and a friend go graverobbing while uncovering the mysterious of the graveyard</p>
                 </div>
             </div>
-            <!-- Repeat this card for each project -->
             <div class="project-card">
                 <div class="video-container">
-                    <iframe src="https://youtu.be/wnRbiuFn2iI" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wnRbiuFn2iI?si=ieh4xC2VtdPrtHih"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="project-content">
                     <h3>Rise To The Top</h3>
-                    <p>Fast Paced Parkour proof of concept developed in Unity</p>
+                    <p>Developed in Unity, RttT is a fast paced parkour proof of concept</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2NOQCJd7PAc?si=bJ2XN0V644pi10lH"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>The Revenge List</h3>
+                    <p>The Revenge List is a game developed alonside 7 other undergraduated, I acted as the Lead Programmer for our Professional Project module</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4c3qBY8bn9M?si=KlyvKuZFwjj9ngwU"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>Twisted Being</h3>
+                    <p>Developed with 3 other developers, I was the sole programmer of this horror title</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R6G1t_KBie0?si=mGQdrY6p9Vq2HQDw"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>Beat Hell Up</h3>
+                    <p>A beat them up game that I solo developed as the final project of year 1 of my Higher National Diploma</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/s9WjK2YYS0s?si=Q6uzgHIjWJ52-orx"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>Space Hunter</h3>
+                    <p>My first "full" game that I developed for the mid term of year 1 of my Higher National Diploma</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TQ12ejG8IFU?si=XWABvRtTY_tmna1Z"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>VR Asteroids</h3>
+                    <p>Short VR game that I developed with the help of an artist friend</p>
                 </div>
             </div>
         </div>
@@ -229,72 +338,85 @@
     <!-- C++ Projects Section -->
     <section id="cpp">
         <div class="section-header">
-            <h2>C++ Projects</h2>
+            <h2>University Projects</h2>
         </div>
         <div class="project-grid">
             <div class="project-card">
                 <img src="images/cpp/Adventure Game.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/Darts Simulation.webp" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/Digit Recognition.webp" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/DirectX11.webp" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/Image editor.webp" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/ML-Agents.gif" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="images/cpp/Networking Demo.webp" alt="C++ Project" loading="lazy" class="project-image">
-                <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
+                    <h3>C++ Adventure Game</h3>
+                    <p>First university project. Using C++ and SFML</p>
                 </div>
             </div>
             <div class="project-card">
                 <img src="images/cpp/OpenGL Portal Scene.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
+                    <h3>OpenGL Graphics Application</h3>
+                    <p>Recreation of Portal's iconic first room using OpenGL'</p>
                 </div>
             </div>
             <div class="project-card">
                 <img src="images/cpp/Wave Survival.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
-                    <h3>Project Name</h3>
-                    <p>Project description. Mention technologies used and challenges overcome.</p>
+                    <h3>C++ Survival Game</h3>
+                    <p>3D game using "gef" for multi platform development (PS Vita)</p>
                 </div>
             </div>
+            <div class="project-card">
+                <img src="images/cpp/ML-Agents.gif" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>Machine Learning</h3>
+                    <p>Used Unity's ML-Agents to train advanced AI behavious in games</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cpp/Darts Simulation.webp" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>Darts Simulation</h3>
+                    <p>Simulation of a darts game with customisable parameters</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cpp/Digit Recognition.webp" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>AI Digit Recognition</h3>
+                    <p>Trained an AI through machine learning using Python to recognise digits 0 through 9</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cpp/DirectX11.webp" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>Shader Project</h3>
+                    <p>Used DirectX11 and shader programming using hlsl to create a dynamic 3D scene</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cpp/Image editor.webp" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>Image Editor</h3>
+                    <p>Parallelised image editor with multiple effects and parameters to showcase the use of multiple threads to increase computation speeds</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/cpp/Networking Demo.webp" alt="C++ Project" loading="lazy" class="project-image">
+                <div class="project-content">
+                    <h3>Networking</h3>
+                    <p>Used Unity to showcase the implementation of Networking using TCP and UDP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contact</h2>
+        </div>
+        <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
+                <a href="mailto:antoniowinner7@gmail.com">
+                    antoniowinner7@gmail.com
+                </a>
+            </p>
         </div>
     </section>
 
