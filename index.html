@@ -182,7 +182,7 @@
 
         .project-image, .gallery-item img {
             background: #f0f0f0;
-            object-fit: contain; /* Change from 'cover' if needed */
+            object-fit: contain;
         }
 
         .skill-tags {
@@ -207,6 +207,44 @@
         .skill-tag:hover {
             transform: translateY(-3px);
         }
+
+        .pdf-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #f8f9fa;
+            border-bottom: 2px solid #00bcd4;
+        }
+
+        .pdf-viewer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.8rem 1.5rem;
+            background: #00bcd4;
+            color: white !important;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .bi-download {
+            margin-right: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -215,6 +253,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#games">Game Projects</a></li>
             <li><a href="#cpp">University Projects</a></li>
+            <li><a href="#honours">Honours Project</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -225,11 +264,10 @@
         </div>
         <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
-                Passionate game developer with 5+ years experience creating diverse gaming experiences across multiple genres.
-                My work spans from experimental prototypes to commercial projects, with particular expertise in gameplay programming and
-                technical design. I bridge technical excellence with player-centric design. This portfolio highlights projects
-                that demostrate my wide range of skills. 
-                <br/>
+                Passionate game developer with 5+ years of experience creating diverse gaming experiences across multiple genres.
+                My work spans from experimental prototypes to commercial projects, with particular expertise in Gameplay Programming and
+                Technical Design. I bridge technical excellence with player-centric design. This portfolio highlights projects that demostrates my wide range of skills.
+                <br />
                 <strong>"If it's not fun, why bother?"</strong> - Reggie Fils-Aimé
             </p>
             <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
@@ -249,7 +287,7 @@
             <h2>Game Projects</h2>
         </div>
         <div class="project-grid">
-            <!-- Repeat this card for each project -->
+            <!-- Repeat for each project -->
             <div class="project-card">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/6M1lalgbFoo?si=wr_7bHVi9N88uWYX"
@@ -259,7 +297,11 @@
                 </div>
                 <div class="project-content">
                     <h3>Shovel & Swindle</h3>
-                    <p>Developed in UE5 with my indie company Afterfire Studios, S&S is a puzzle/adventure coop game where you and a friend go graverobbing while uncovering the mysterious of the graveyard</p>
+                    <p>
+                        First game developed by my indie company Afterfire Studios and commercial title.<br />
+                        I was the Lead Designer in charge of the level, puzzles, mechanics and overall progression.<br />
+                        In addition, I also contributted to the codebase where neccessary to support the Lead Programmer.
+                    </p>
                 </div>
             </div>
 
@@ -272,7 +314,10 @@
                 </div>
                 <div class="project-content">
                     <h3>Rise To The Top</h3>
-                    <p>Developed in Unity, RttT is a fast paced parkour proof of concept</p>
+                    <p>
+                        A passion project I solo developed after finishing my Higher National Diploma.<br />
+                        It serves to show my knowledge and experinece when it comes to the game development pipeline, from modelling and rigging to creating complex code structures that are easily expandable.
+                    </p>
                 </div>
             </div>
 
@@ -285,7 +330,10 @@
                 </div>
                 <div class="project-content">
                     <h3>The Revenge List</h3>
-                    <p>The Revenge List is a game developed alonside 7 other undergraduated, I acted as the Lead Programmer for our Professional Project module</p>
+                    <p>I acted as the Lead Programmer for this 8 person member team consisting of 3 designers, 3 artists and 2 programmers.<br />
+                    I created the combat, movement and rythm aspects of the game among other minor systems. <br />
+                    In addition to playtesting and supporting designers to bring their decisions to life, and artist to make their work look just as how they envisioned it.
+                    </p>
                 </div>
             </div>
 
@@ -298,7 +346,9 @@
                 </div>
                 <div class="project-content">
                     <h3>Twisted Being</h3>
-                    <p>Developed with 3 other developers, I was the sole programmer of this horror title</p>
+                    <p>This title is the culmination of everything I learned during my National Higher Diploma and was developed alongside 3 artists.<br />
+                    I servedas the Lead Programmer and assisted with the overall design of the game. The movement, collectible system, level transition, enemy AI where fully developed by myself to point out just a couple.
+                    </p>
                 </div>
             </div>
 
@@ -311,11 +361,13 @@
                 </div>
                 <div class="project-content">
                     <h3>Beat Hell Up</h3>
-                    <p>A beat them up game that I solo developed as the final project of year 1 of my Higher National Diploma</p>
+                    <p>A 2D Beat Them Up that marks the one year milestone of my game development journey.<br />
+                    I developed all aspects of the game and was very proud of it at the time.
+                    </p>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!--<div class="project-card">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/s9WjK2YYS0s?si=Q6uzgHIjWJ52-orx"
                             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
@@ -326,7 +378,7 @@
                     <h3>Space Hunter</h3>
                     <p>My first "full" game that I developed for the mid term of year 1 of my Higher National Diploma</p>
                 </div>
-            </div>
+            </div>-->
 
             <div class="project-card">
                 <div class="video-container">
@@ -337,13 +389,60 @@
                 </div>
                 <div class="project-content">
                     <h3>VR Asteroids</h3>
-                    <p>Short VR game that I developed with the help of an artist friend</p>
+                    <p>My first experience developing for Virtual Reality.<br />
+                    I made this project in collaboration with an artist.
+                    I took care of all of the code and in engine development.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- C++ Projects Section -->
+    <!-- Honours Project Section -->
+    <section id="honours">
+        <div class="section-header">
+            <h2>Honours Project - Dissertation</h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="pdf-container">
+                    <iframe src="documents/CMP403_Dissertation_AntonioVillalta.pdf#view=FitH"
+                            class="pdf-viewer"
+                            title="Combining Signed Distance Fields and Raymarching with Extended Position Based Dynamics for Rendering and Physics in Virtual Worlds">
+                    </iframe>
+                </div>
+                <div class="project-content">
+                    <h3>(BSc) Computer Games Applications Development, 2024 - Abertay University</h3>
+                    <p>Combining Signed Distance Fields and Raymarching with Extended Position Based Dynamics for Rendering and Physics in Virtual Worlds</p>
+                    <p class="academic-meta">
+                        <span class="award">Awarded Upper Second-Class Honours</span>
+                        <span class="date"> - May 2024</span>
+                    </p>
+                    <div class="abstract">
+                        <p>
+                            This dissertation investigated the implementation and evaluated the
+                            performance of two advanced techniques, Signed Distance Fields (SDF)
+                            and XPBD (Extended Position Based Dynamics), in the context of real-time
+                            rendering and physics simulation for video games. The primary objective
+                            was to assess the viability of integrating these techniques into modern
+                            game development pipelines to enhance visual quality and realism.
+                        </p>
+                    </div>
+                    <div class="project-links">
+                        <a href="documents/CMP403_Dissertation_AntonioVillalta.pdf" download class="download-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- University Projects Section -->
     <section id="cpp">
         <div class="section-header">
             <h2>University Projects</h2>
@@ -353,7 +452,10 @@
                 <img src="images/cpp/Adventure Game.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>C++ Adventure Game</h3>
-                    <p>First university project. Using C++ and SFML</p>
+                    <p>
+                        My first game developed while at university. We were tasked with using C++ and SFML to create a simple video game experience.<br />
+                        I chose to create a simple adventure game, inspired by some of my favourite games where you have limited healing, tough enemies, the ability to parry and bonfires that act as checkpoints.
+                    </p>
                 </div>
             </div>
 
@@ -361,7 +463,10 @@
                 <img src="images/cpp/OpenGL Portal Scene.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>OpenGL Graphics Application</h3>
-                    <p>Recreation of Portal's iconic first room using OpenGL'</p>
+                    <p>
+                        We were tasked with creating a 3D scene utilising as many advanced techniques as possible, I chose to recreate Portal's iconic first room to showcase "portals"<br />
+                        The scene also makes use of multiple shadows, depending on how many light are in the scene, that are dynamic and react with the position of the light.
+                    </p>
                 </div>
             </div>
 
@@ -369,7 +474,10 @@
                 <img src="images/cpp/Wave Survival.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>C++ Survival Game</h3>
-                    <p>3D game using "gef" for multi platform development (PS Vita)</p>
+                    <p>
+                        A 3D game development project that made use of "gef", which was meant to be used for multiplatform development.
+                        Unfortunatly the University had problems with the licensing and we weren't able to deploy to the PS Vita
+                    </p>
                 </div>
             </div>
 
@@ -377,7 +485,10 @@
                 <img src="images/cpp/ML-Agents.gif" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>Machine Learning</h3>
-                    <p>Used Unity's ML-Agents to train advanced AI behavious in games</p>
+                    <p>
+                        A project intended to showcase the potential of using Neural Networks and Machine Learning for specialised video game AIs.<br />
+                        The project used Unity's ML-Agents to train the AI "brain" while modifying the rewards system and fine tuning parameters to create a AI specialised in dodging projectiles through "sight".                 
+                    </p>
                 </div>
             </div>
 
@@ -385,7 +496,9 @@
                 <img src="images/cpp/Darts Simulation.webp" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>Darts Simulation</h3>
-                    <p>Simulation of a darts game with customisable parameters</p>
+                    <p>
+                        A simple multi-threaded simulation of a darts game to showcase the use cases of multi-threading and it's shortcomings in simpler programs.
+                    </p>
                 </div>
             </div>
 
@@ -393,7 +506,11 @@
                 <img src="images/cpp/Digit Recognition.webp" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>AI Digit Recognition</h3>
-                    <p>Trained an AI through machine learning using Python to recognise digits 0 through 9</p>
+                    <p>
+                        A standalone application that recognises user drawn numbers 0 through 9.
+                        It was developed in Python and used the MNIST database to feed the neural network a large number of samples.
+                        The application also outputs a heatmap showcasing how "confident" the AI is about each area of the drawn number.
+                    </p>
                 </div>
             </div>
 
@@ -401,7 +518,9 @@
                 <img src="images/cpp/DirectX11.webp" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>Shader Project</h3>
-                    <p>Used DirectX11 and shader programming using hlsl to create a dynamic 3D scene</p>
+                    <p>
+                        A DirectX11 project which makes use of shaders written in hlsl to create different effects at different stages of the rendering pipeline.
+                    </p>
                 </div>
             </div>
 
@@ -409,7 +528,9 @@
                 <img src="images/cpp/Image editor.webp" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>Image Editor</h3>
-                    <p>Parallelised image editor with multiple effects and parameters to showcase the use of multiple threads to increase computation speeds</p>
+                    <p>
+                        Parallelised image editor with multiple effects and parameters to showcase the use of multiple threads to increase computation speeds for complex effects.
+                    </p>
                 </div>
             </div>
 
@@ -417,7 +538,9 @@
                 <img src="images/cpp/Networking Demo.webp" alt="C++ Project" loading="lazy" class="project-image">
                 <div class="project-content">
                     <h3>Networking</h3>
-                    <p>Used Unity to showcase the implementation of Networking using TCP and UDP</p>
+                    <p>
+                        Used Unity to showcase the implementation of Networking for a multiplayer using TCP and UDP.
+                    </p>
                 </div>
             </div>
         </div>
